@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Gusttó Cocinería | Sabor que Encanta</title>
+    <meta name="description"
+        content="EL GUSTTÓ COCINERIA - Comida casera chilena con sabor tradicional en Curicó. Colaciones desde $3.500. ¡Pide ahora en Uber Eats!">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gustto-yellow': '#FFD700',
+                        'gustto-green': '#2E7D32',
+                        'gustto-dark': '#1A1A1A',
+                        'gustto-accent': '#E53935'
+                    },
+                    fontFamily: {
+                        'script': ['"Grand Hotel"', 'cursive'],
+                        'sans': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+        }
+
+        .logo-font {
+            font-family: 'Grand Hotel', cursive;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gustto-dark bg-gray-50 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div
+                    class="w-14 h-14 rounded-full overflow-hidden border-[3px] border-gustto-yellow shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <img src="img/6.jpeg" alt="El Gusttó Logo" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col leading-tight">
+                    <span class="logo-font text-3xl sm:text-4xl font-bold text-gustto-dark">El Gusttó</span>
+                    <span
+                        class="text-[10px] uppercase tracking-[0.25em] text-gustto-green font-bold -mt-1">Cocinería</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-wider">
+                <a href="#inicio"
+                    class="hover:text-gustto-green transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gustto-yellow hover:after:w-full after:transition-all">Inicio</a>
+                <a href="#nosotros"
+                    class="hover:text-gustto-green transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gustto-yellow hover:after:w-full after:transition-all">Nosotros</a>
+                <a href="#menu"
+                    class="hover:text-gustto-green transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gustto-yellow hover:after:w-full after:transition-all">Menú</a>
+                <a href="#ubicacion"
+                    class="hover:text-gustto-green transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gustto-yellow hover:after:w-full after:transition-all">Ubicación</a>
+                <a href="#contacto"
+                    class="hover:text-gustto-green transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gustto-yellow hover:after:w-full after:transition-all">Contacto</a>
+            </div>
+
+            <a href="https://www.ubereats.com/cl/store/cocineria-el-gustto/EFXlyQ42S2Sa2LOdISvNkA" target="_blank"
+                class="bg-gustto-green text-white px-6 py-3 rounded-full font-bold hover:bg-gustto-dark hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2">
+                <i class="fas fa-shopping-bag text-sm"></i>
+                <span class="hidden sm:inline">Pedir Ahora</span>
+                <span class="sm:hidden">Pedir</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen pt-24 flex items-center hero-pattern">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 animate-fade-in-up">
+                <span
+                    class="inline-block bg-gustto-yellow/20 text-gustto-green font-bold px-5 py-2 rounded-full text-sm uppercase shadow-sm">
+                    <i class="fas fa-fire mr-1 text-gustto-accent"></i> ¡Bienvenidos a la mejor sazón!
+                </span>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
+                    <span class="logo-font text-gustto-green block text-6xl sm:text-7xl md:text-8xl">El Gusttó</span>
+                    <span class="text-gustto-dark">Cocinería</span>
+                </h1>
+                <p class="text-gray-600 text-lg max-w-lg leading-relaxed">
+                    En <strong class="text-gustto-green">EL GUSTTÓ COCINERÍA</strong>, cocinamos con amor y tradición.
+                    Platos caseros chilenos que te harán sentir como en casa. ¡Ven a vivir una experiencia deliciosa!
+                </p>
+                <div class="flex flex-wrap gap-4 items-center">
+                    <a href="#menu"
+                        class="bg-gustto-dark text-white px-8 py-4 rounded-2xl font-bold hover:bg-black transition-all flex items-center gap-3 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                        Ver Menú del Día <i class="fas fa-utensils text-gustto-yellow"></i>
+                    </a>
+                    <a href="#ubicacion"
+                        class="border-2 border-gustto-green text-gustto-green px-8 py-4 rounded-2xl font-bold hover:bg-gustto-green hover:text-white transition-all flex items-center gap-3">
+                        <i class="fas fa-map-marker-alt"></i> Cómo Llegar
+                    </a>
+                </div>
+                <div class="flex items-center gap-4 pt-2">
+                    <div class="flex -space-x-3">
+                        <img src="https://i.pravatar.cc/100?u=a1"
+                            class="w-10 h-10 rounded-full border-2 border-white shadow-md">
+                        <img src="https://i.pravatar.cc/100?u=b2"
+                            class="w-10 h-10 rounded-full border-2 border-white shadow-md">
+                        <img src="https://i.pravatar.cc/100?u=c3"
+                            class="w-10 h-10 rounded-full border-2 border-white shadow-md">
+                    </div>
+                    <p class="text-sm text-gray-500">
+                        <span class="font-bold text-gustto-green">+500</span> clientes felices
+                    </p>
+                </div>
+            </div>
+            <div class="relative">
+                <div
+                    class="absolute -z-10 w-[120%] h-[120%] -top-[10%] -left-[10%] bg-gustto-yellow rounded-full opacity-10 animate-pulse">
+                </div>
+                <img src="img/1.jpeg" alt="Pollo Arvejado - EL GUSTTÓ COCINERÍA"
+                    class="rounded-[3rem] shadow-2xl border-8 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div
+                    class="absolute -bottom-6 -left-6 bg-white p-5 rounded-3xl shadow-2xl border-2 border-gustto-yellow flex items-center gap-4 hover:scale-105 transition-transform animate-float">
+                    <div class="bg-gustto-green/10 p-3 rounded-2xl">
+                        <i class="fas fa-star text-gustto-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xl text-gustto-dark">4.8 / 5.0</p>
+                        <p class="text-gray-400 text-xs font-semibold uppercase">En Uber Eats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="nosotros" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span
+                    class="inline-block bg-gustto-yellow/20 text-gustto-green font-bold px-4 py-1 rounded-full text-sm uppercase">Nuestra
+                    Esencia</span>
+                <h2 class="logo-font text-5xl sm:text-6xl text-gustto-green">¿Por qué elegirnos?</h2>
+                <p class="text-gray-500 text-lg">En <strong>EL GUSTTÓ COCINERÍA</strong>, nuestra cocina no solo llena
+                    el estómago, sino que también alegra el alma.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-8 rounded-[2.5rem] bg-gray-50 hover:bg-gustto-yellow/10 border-2 border-transparent hover:border-gustto-yellow transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div
+                        class="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-heart text-gustto-accent text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Sazón Casera</h3>
+                    <p class="text-gray-600 leading-relaxed">Recetas heredadas que mantienen el sabor auténtico de la
+                        cocina chilena tradicional.</p>
+                </div>
+                <div
+                    class="p-8 rounded-[2.5rem] bg-gray-50 hover:bg-gustto-green/10 border-2 border-transparent hover:border-gustto-green transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div
+                        class="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-leaf text-gustto-green text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Ingredientes Frescos</h3>
+                    <p class="text-gray-600 leading-relaxed">Seleccionamos cada vegetal y proteína directamente de
+                        ferias locales cada mañana.</p>
+                </div>
+                <div
+                    class="p-8 rounded-[2.5rem] bg-gray-50 hover:bg-gustto-dark/10 border-2 border-transparent hover:border-gustto-dark transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div
+                        class="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bolt text-gustto-yellow text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Rapidez y Calidad</h3>
+                    <p class="text-gray-600 leading-relaxed">Entendemos tu tiempo. Tu pedido estará listo y caliente
+                        justo cuando lo necesites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anuncio de Precios Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 space-y-4">
+                <span
+                    class="inline-block bg-gustto-green/20 text-gustto-green font-bold px-4 py-1 rounded-full text-sm uppercase">
+                    <i class="fas fa-tag mr-1"></i> Menú del Día
+                </span>
+                <h2 class="logo-font text-5xl sm:text-6xl text-gustto-green">Nuestras Colaciones</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">¡Precios increíbles para disfrutar cada día en
+                    <strong class="text-gustto-green">EL GUSTTÓ COCINERÍA</strong>!</p>
+            </div>
+            <div class="max-w-md mx-auto">
+                <img src="img/7.png" alt="Menú de Colaciones - EL GUSTTÓ COCINERÍA"
+                    class="w-full rounded-[2.5rem] shadow-2xl hover:scale-[1.02] transition-all duration-500 border-4 border-gustto-yellow/30">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Uber Eats Section -->
+    <section id="menu" class="py-24 bg-gustto-dark text-white overflow-hidden relative">
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-gustto-green opacity-20 blur-3xl -translate-y-1/2 translate-x-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-96 h-96 bg-gustto-yellow opacity-10 blur-3xl translate-y-1/2 -translate-x-1/2">
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 space-y-8">
+                    <span
+                        class="inline-block bg-gustto-yellow/20 text-gustto-yellow font-bold px-4 py-1 rounded-full text-sm uppercase">
+                        <i class="fas fa-motorcycle mr-1"></i> Delivery
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold italic leading-tight">¡Encuéntranos en
+                        Delivery!</h2>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        ¿No puedes venir? No te preocupes. Llevamos todo el sabor de <span
+                            class="logo-font text-gustto-yellow text-3xl">El Gusttó</span> hasta la puerta de tu casa.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Uber Eats - Logo con FontAwesome en vez de imagen externa rota -->
+                        <a href="https://www.ubereats.com/cl/store/cocineria-el-gustto/EFXlyQ42S2Sa2LOdISvNkA"
+                            target="_blank"
+                            class="flex items-center gap-4 bg-white/10 hover:bg-white/20 p-5 rounded-2xl transition-all duration-300 group border border-white/10 hover:border-gustto-yellow">
+                            <div
+                                class="bg-gustto-green w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-utensils text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-bold text-lg">Uber Eats</p>
+                                <p class="text-sm text-gray-300">Calificación de 4.8 estrellas ⭐</p>
+                            </div>
+                            <i
+                                class="fas fa-chevron-right group-hover:translate-x-2 transition-transform text-gustto-yellow text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/elgusttococineria/" target="_blank"
+                            class="flex items-center gap-4 p-5 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/5 hover:border-gustto-yellow transition-all duration-300 group">
+                            <div
+                                class="bg-gradient-to-br from-purple-600 to-pink-500 w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-instagram text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-semibold text-lg">@elgusttococineria</p>
+                                <p class="text-sm text-gray-300">Historias diarias con los menús</p>
+                            </div>
+                            <i
+                                class="fas fa-chevron-right group-hover:translate-x-2 transition-transform text-gustto-yellow text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="space-y-4 pt-12">
+                        <img src="img/1.jpeg" alt="Pollo Arvejado"
+                            class="rounded-3xl shadow-2xl transform hover:-rotate-3 transition-transform duration-500 border-4 border-white/10">
+                        <img src="img/3.jpeg" alt="Pescado Frito"
+                            class="rounded-3xl shadow-2xl transform hover:rotate-3 transition-transform duration-500 border-4 border-white/10">
+                    </div>
+                    <div class="space-y-4">
+                        <img src="img/4.jpeg" alt="Cazuela de Mariscos"
+                            class="rounded-3xl shadow-2xl transform hover:rotate-3 transition-transform duration-500 border-4 border-white/10">
+                        <img src="img/2.jpeg" alt="Guiso"
+                            class="rounded-3xl shadow-2xl transform hover:-rotate-3 transition-transform duration-500 border-4 border-white/10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa de Ubicación - MINIMALISTA -->
+    <section id="ubicacion" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <!-- Info -->
+                    <div class="md:w-1/2 space-y-6">
+                        <span
+                            class="inline-block bg-gustto-yellow/20 text-gustto-green font-bold px-4 py-1 rounded-full text-sm uppercase">
+                            <i class="fas fa-map-marker-alt mr-1"></i> Encuéntranos
+                        </span>
+                        <h2 class="logo-font text-5xl text-gustto-green">Cómo Llegar</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            Visítanos en <strong class="text-gustto-dark">EL GUSTTÓ COCINERÍA</strong> en la ciudad de
+                            <strong>Curicó</strong>.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl shadow-sm">
+                                <i class="fas fa-clock text-gustto-green text-lg"></i>
+                                <div>
+                                    <span class="text-sm font-semibold text-gustto-dark">Lunes a Viernes</span>
+                                    <span class="text-gustto-green font-bold ml-2">12:00 - 20:00</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl shadow-sm">
+                                <i class="fas fa-calendar-times text-gustto-accent text-lg"></i>
+                                <div>
+                                    <span class="text-sm font-semibold text-gustto-dark">Sábado y Domingo</span>
+                                    <span class="text-gustto-accent font-bold ml-2">Cerrado</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://maps.app.goo.gl/bSJ5jz4Rbk1263mz5" target="_blank"
+                            class="inline-flex items-center gap-3 bg-gustto-green text-white px-6 py-3 rounded-xl font-bold hover:bg-gustto-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            <i class="fas fa-directions"></i>
+                            Abrir en Google Maps
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                    <!-- Mapa -->
+                    <div class="md:w-1/2">
+                        <div class="rounded-2xl overflow-hidden shadow-xl border-2 border-gustto-yellow/30">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.4!2d-71.2432011!3d-34.988659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664570025b2d38b%3A0x5b9c14c95d06284!2sCocineria%20el%20gustt%C3%B3!5e0!3m2!1ses!2scl!4v1708200000000"
+                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto"
+        class="bg-gradient-to-b from-gray-900 to-gustto-dark text-white pt-20 pb-8 border-t-4 border-gustto-yellow">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-14 h-14 rounded-full overflow-hidden border-[3px] border-gustto-yellow shadow-lg">
+                            <img src="img/6.jpeg" alt="El Gusttó Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col leading-tight">
+                            <span class="logo-font text-3xl font-bold text-white">El Gusttó</span>
+                            <span
+                                class="text-[10px] uppercase tracking-[0.25em] text-gustto-yellow font-bold -mt-1">Cocinería</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        <strong class="text-gustto-yellow">EL GUSTTÓ COCINERÍA</strong> — Sabor casero chileno que
+                        enamora. Visítanos y descubre por qué somos la opción favorita en Curicó.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/elgustto/?locale=es_LA" target="_blank"
+                            class="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#1877F2] transition-all duration-300 border border-white/20 hover:border-[#1877F2] hover:scale-110"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/elgusttococineria/" target="_blank"
+                            class="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 transition-all duration-300 border border-white/20 hover:border-pink-500 hover:scale-110"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#25D366] transition-all duration-300 border border-white/20 hover:border-[#25D366] hover:scale-110"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Horario -->
+                <div class="space-y-6">
+                    <h4 class="font-bold text-lg text-gustto-yellow flex items-center gap-2">
+                        <i class="fas fa-clock"></i> Horario de Atención
+                    </h4>
+                    <ul class="text-gray-300 space-y-3 text-sm">
+                        <li class="flex justify-between border-b border-white/10 pb-2">
+                            <span>Lunes - Viernes</span>
+                            <span class="text-gustto-yellow font-bold">12:00 - 20:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/10 pb-2">
+                            <span>Sábado</span>
+                            <span class="text-gustto-accent font-bold">Cerrado</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Domingo</span>
+                            <span class="text-gustto-accent font-bold">Cerrado</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="space-y-6">
+                    <h4 class="font-bold text-lg text-gustto-yellow flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt"></i> Ubicación
+                    </h4>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Encuéntranos en el corazón de <strong class="text-white">Curicó</strong>. Cocinando frescura y
+                        tradición para ti todos los días de lunes a viernes.
+                    </p>
+                    <a href="https://maps.app.goo.gl/bSJ5jz4Rbk1263mz5" target="_blank"
+                        class="inline-flex items-center gap-2 text-gustto-yellow font-bold hover:gap-3 transition-all group text-sm">
+                        <i class="fas fa-directions"></i>
+                        Ver en Google Maps
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-center space-y-2">
+                <p class="text-gustto-yellow text-xl logo-font">EL GUSTTÓ COCINERÍA</p>
+                <p class="text-gray-500 text-xs">&copy; 2024 El Gusttó Cocinería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/56912345678" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-bounce hover:animate-none group">
+        <i class="fab fa-whatsapp text-3xl group-hover:rotate-12 transition-transform"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="scrollTop"
+        class="fixed bottom-24 right-6 z-50 bg-gustto-yellow text-gustto-dark w-12 h-12 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all opacity-0">
+        <i class="fas fa-arrow-up font-bold"></i>
+    </button>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const btn = document.getElementById('scrollTop');
+            btn.style.opacity = window.pageYOffset > 300 ? '1' : '0';
+        });
+    </script>
+
+</body>
+
+</html>
